@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Photosynthesis game dashboard</title>
+        <meta http-equiv="refresh" content="1" />
+    </head>
+    <body>
+        <h2> Winter player</h2><br>
+        Sun points: {{game_state_summary.winter_sun_points}}</br>
+        Score: {{game_state_summary.winter_score}}</br></br>
+
+        <h2> Autumn player</h2><br>
+        Sun points: {{game_state_summary.autumn_sun_points}}</br>
+        Score: {{game_state_summary.autumn_score}}</br></br>
+        
+        <h2> Next reward for cutting tree</h2><br>
+        Center field: {{game_state_summary.center_next_reward}}<br>
+        Fertile fields: {{game_state_summary.fertile_next_reward}}<br>
+        Edge fields: {{game_state_summary.edge_next_reward}}<br>
+
+        {% if game_state_summary.game_busy: %}
+            <h3> Processing your move...</h3></br>
+        {% endif %}
+
+    </body>
+</html>
